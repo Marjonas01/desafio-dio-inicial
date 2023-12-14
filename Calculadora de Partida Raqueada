@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Digite a quantidade de vitórias:");
+        int vitorias = scanner.nextInt();
+
+        System.out.println("Digite a quantidade de derrotas:");
+        int derrotas = scanner.nextInt();
+
+        int saldoVitorias = calcularSaldo(vitorias, derrotas);
+        String nivel = determinarNivel(vitorias);
+
+        System.out.println("O Herói tem um saldo de vitórias de " + saldoVitorias + " e está no nível de " + nivel);
+
+        scanner.close();
+    }
+
+    // Função saldo de vitórias
+    private static int calcularSaldo(int vitorias, int derrotas) {
+        return vitorias - derrotas;
+    }
+
+    // Função nível com base na quantidade de vitórias
+    private static String determinarNivel(int vitorias) {
+        if (vitorias < 10) {
+            return "Ferro";
+        } else if (vitorias <= 20) {
+            return "Bronze";
+        } else if (vitorias <= 50) {
+            return "Prata";
+        } else if (vitorias <= 80) {
+            return "Ouro";
+        } else if (vitorias <= 90) {
+            return "Diamante";
+        } else if (vitorias <= 100) {
+            return "Lendário";
+        } else {
+            return "Imortal";
+        }
+    }
+}
