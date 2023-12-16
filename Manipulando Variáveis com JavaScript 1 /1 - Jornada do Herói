@@ -1,0 +1,14 @@
+public class Main
+{
+	public static void main(String[] args) {
+		int posicaoInicial,passos;
+	
+//Entrada posiçao posicaoInicial. Quantidade de passos do heroi.
+		posicaoInicial= 15;
+		passos= 3;
+		
+//Saida Imprima a posição final do herói após dar a quantidade de passos especificada.
+		System.out.println("Posição final do herói");
+		System.out.println(+ posicaoInicial + passos);
+	}
+}
